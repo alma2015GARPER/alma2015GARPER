@@ -56,6 +56,15 @@
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
+        xsi:type="setup.p2:P2Task"
+        label="Findbugs">
+      <requirement
+          name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"
+          optional="true"/>
+      <repository
+          url="http://findbugs.cs.umd.edu/eclipse/"/>
+    </setupTask>
+  <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone"
       remoteURI="alma2015RUSGARPER/alma2015RUSGARPER">
