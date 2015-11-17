@@ -95,6 +95,9 @@
       <predicate
           xsi:type="predicates:NamePredicate"
           pattern="fr.univnantes.alma.server"/>
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="fr.univnantes.alma.resources"/>
     </workingSet>
     <description>The dynamic working sets for ${scope.project.label}</description>
   </setupTask>
@@ -105,6 +108,8 @@
         rootFolder="${git.clone.location}/resources/fr.univnantes.alma.oomph"/>
     <sourceLocator
         rootFolder="${git.clone.location}/bundles/fr.univnantes.alma.server"/>
+    <sourceLocator
+        rootFolder="${git.clone.location}/resources/fr.univnantes.alma.resources"/>
     <description></description>
   </setupTask>
   <stream name="master"
@@ -114,4 +119,3 @@
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
   <description>ALMA 2015 for project manager course</description>
 </setup:Project>
-
