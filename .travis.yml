@@ -1,0 +1,16 @@
+language: java
+script: mvn clean verify -f fr.univnantes.alma.releng/pom.xml
+jdk: oraclejdk8
+
+deploy:
+    skip_cleanup: true
+    provider: releases
+    api_key:
+        secure: sf4q7tGKoZUm75qYxkOzhKLLXvkaJd+ghjbdpGcqm2Roml3cio58Zw8Bo3Sljnk1946GjuPZA3DJJvc5bb+ODx9JHcUzONxjbvY7vqcPAXYsYG+WLvwEbRUzHK47C+wEW7IPy+Lr9yHagSFUxWkQlQLITUDTmJxoQlZk3B7VPXgV4IYxBjrG5lm0FDzx9j1/zTIFqslrha2vxm+lwzZVIbyfHZdBzshMhInBCaMqLpEb+N0xOmeH+jfK238a2qbJQwi8LyQnQaeArJeYxY4dYqEcaRGOKMhBQhbB5g1gvsoV4iTQas6X8ZQXIN3/RK9sNT9PcI783ktxcVblAEn9i8/MK4CqWP+gtDpEZnZwJiGFXiuGrKUHug9/lp8CObpVgk3YaHxXy4r71nJM1YtP+dtr/R47K9G5M8f2mR9uN9/Nj7ZkGWs6z8BuXYBKwjUz8N3UthVexfBRx4z81QcQXduybo/InDczlRsgbtD+Qwm7R3KS/1Pq+lzG7feNwfuUfwAW6zrqMH1KZdPFqiUubmrL46MP2gLpPolcwxmpzZ1pb3TdOL5im6VUmTfhwseib7AwL5W64kTHdY+kcn1tGwMoZpo1C8Iirt0h4G+/C2VzM5pXgHarAjw3WbQRjv4i/B4x4TsHY5ci7Cz0k/LDWECVyxKNkauyBHV6zuudPWg=
+    file_glob: true
+    file: fr.univnantes.alma.repository/target/products/ALMAServer-*.zip
+    on:
+        tags: true
+        all_branches: false
+        repo: alma2015RUSGARPER/alma2015RUSGARPER
+
